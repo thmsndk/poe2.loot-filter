@@ -15,7 +15,7 @@ Show # $type->gold $tier->stack3
 	SetBorderColor 235 200 110 255 
 	SetBackgroundColor 20 20 0 255 
 	PlayAlertSound 2 300
-	PlayEffect Orange
+	PlayEffect orange
 	MinimapIcon 1 Yellow Cross
 
 Show # $type->gold $tier->stack2
@@ -25,7 +25,7 @@ Show # $type->gold $tier->stack2
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255 
 	SetBackgroundColor 20 20 0 255 
-	PlayEffect Orange Temp
+	PlayEffect orange Temp
 	MinimapIcon 1 White Cross
 
 Show # $type->gold $tier->stack1
@@ -79,7 +79,7 @@ Show # All rares
 	SetFontSize 45
 	# SetBackgroundColor 20 20 0 255 
 	PlayAlertSound 8 300
-	PlayEffect Yellow
+	PlayEffect yellow
 	MinimapIcon 2 Yellow Diamond
     Continue
 
@@ -90,7 +90,7 @@ Show # All uniques
 	# SetBorderColor 175 96 37 255 
 	# SetBackgroundColor 20 20 0 255 
 	PlayAlertSound 3 300
-	PlayEffect Brown
+	PlayEffect brown
 	MinimapIcon 2 Brown Star
     Continue
 
@@ -107,7 +107,7 @@ Show
 	SetFontSize 35
 	SetBorderColor 100 50 30 255 
 	SetBackgroundColor 20 20 0 255 
-    PlayEffect White
+    PlayEffect white
 	MinimapIcon 2 White Circle
     Continue
 
@@ -153,7 +153,7 @@ Show
 	SetBorderColor 0 0 0 255 
 	SetBackgroundColor 213 159 0 255 
 	PlayAlertSound 2 300
-	PlayEffect White
+	PlayEffect white
 	MinimapIcon 2 White Circle
 
 Show 
@@ -164,7 +164,7 @@ Show
 	SetBorderColor 255 0 0 255 
 	SetBackgroundColor 255 255 255 255 
 	PlayAlertSound 6 300
-	PlayEffect Red
+	PlayEffect red
 	MinimapIcon 0 Red Star
 
 Show 
@@ -175,7 +175,7 @@ Show
 	SetBorderColor 255 0 255 255 
 	SetBackgroundColor 100 0 100 255 
 	PlayAlertSound 6 300
-	PlayEffect Pink
+	PlayEffect pink
 	MinimapIcon 0 Pink Circle
 
 # Orb of Alchemy - upgrades normal to rare with 4 modifiers
@@ -189,7 +189,7 @@ Show
 	SetBorderColor 0 0 0 255 
 	SetBackgroundColor 180 76 58 255 
 	#PlayAlertSound 2 300
-	PlayEffect White
+	PlayEffect white
 	MinimapIcon 2 White Circle
 
 #===============================================================================================================
@@ -208,14 +208,14 @@ Show
 	SetFontSize 30
 	SetTextColor 40 130 130 255 
 	SetBorderColor 0 0 0 
-    PlayEffect Grey 
+    PlayEffect grey 
 
 Show 
 	Class == "Skill Gems" "Support Gems"
 	SetFontSize 35
 	SetTextColor 40 130 130 255 
 	SetBorderColor 0 0 0 
-    PlayEffect Grey 
+    PlayEffect cyan 
 
 # TODO: Color support gems differently
 
@@ -229,7 +229,7 @@ Show
 	SetBorderColor 255 0 255 255 
 	SetBackgroundColor 100 0 100 255 
 	PlayAlertSound 3 300
-	PlayEffect Pink
+	PlayEffect pink
 	MinimapIcon 0 Pink Circle
 
 #===============================================================================================================
@@ -259,7 +259,7 @@ Show
 	SetBackgroundColor 20 20 0 255
     Continue
 
-Show # %D4 $type->leveling->normalmagic->act1 $tier->casterweapons
+Show # caster weapons
 	Class == "Sceptres" "Wands"
 	SetBorderColor 0 120 120 255
 	SetBackgroundColor 20 20 0 255
@@ -291,5 +291,5 @@ Show
 	SetBorderColor 74 230 58 255 
 	SetBackgroundColor 20 20 0 255
 	PlayAlertSound 3 300
-	PlayEffect Green
+	PlayEffect green
 	MinimapIcon 0 Green Pentagon
