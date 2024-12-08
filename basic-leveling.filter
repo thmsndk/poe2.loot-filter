@@ -100,36 +100,7 @@ Show # All uniques
 # Currency
 #===============================================================================================================
 
-Show
-	StackSize >= 10
-	Class == "Stackable Currency"
-	BaseType == "Scroll of Wisdom"
-	SetFontSize 45
-	SetBorderColor 200 100 60 255 
-	SetBackgroundColor 30 5 5 255 
-    PlayEffect White
-	MinimapIcon 2 White Circle
-
-Show
-	StackSize >= 5
-	Class == "Stackable Currency"
-	BaseType == "Scroll of Wisdom"
-	SetFontSize 45
-	SetBorderColor 200 100 60 255 
-	SetBackgroundColor 30 5 5 255 
-    PlayEffect White
-	MinimapIcon 2 White Circle
-
-Show
-	StackSize >= 3
-	Class == "Stackable Currency"
-	BaseType == "Scroll of Wisdom"
-	SetFontSize 40
-	SetBorderColor 100 50 30 255 
-	SetBackgroundColor 20 20 0 255 
-    PlayEffect White
-	MinimapIcon 2 White Circle
-
+# Scroll of Wisdom
 Show
 	Class == "Stackable Currency"
 	BaseType == "Scroll of Wisdom"
@@ -138,8 +109,25 @@ Show
 	SetBackgroundColor 20 20 0 255 
     PlayEffect White
 	MinimapIcon 2 White Circle
- 
+    Continue
 
+Show
+	StackSize >= 5
+	Class == "Stackable Currency"
+	BaseType == "Scroll of Wisdom"
+	SetFontSize 45
+	SetBorderColor 200 100 60 255 
+	SetBackgroundColor 30 5 5 255 
+    Continue
+
+Show
+	StackSize >= 3
+	Class == "Stackable Currency"
+	BaseType == "Scroll of Wisdom"
+	SetFontSize 40
+	SetBorderColor 100 50 30 255 
+	SetBackgroundColor 20 20 0 255 
+    Continue
 
  Show 
 	Class == "Stackable Currency"
