@@ -1,4 +1,7 @@
+!*.filter
+
 /poe2_production
 *.ini
 
-!*.filter
+*filterblade*
+*NeverSinks*
