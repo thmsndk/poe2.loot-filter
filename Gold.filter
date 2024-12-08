@@ -1,0 +1,51 @@
+#===============================================================================================================
+# Gold
+#===============================================================================================================
+
+Show # $type->gold $tier->stack3
+	StackSize >= 3001
+	BaseType == "Gold"
+	SetFontSize 45
+	SetTextColor 235 200 110 255 
+	SetBorderColor 235 200 110 255 
+	SetBackgroundColor 20 20 0 255 
+	PlayAlertSound 2 300
+	PlayEffect Orange
+	MinimapIcon 1 Yellow Cross
+
+Show # $type->gold $tier->stack2
+	StackSize >= 500
+	BaseType == "Gold"
+	SetFontSize 45
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255 
+	SetBackgroundColor 20 20 0 255 
+	PlayEffect Orange Temp
+	MinimapIcon 1 White Cross
+
+Show # $type->gold $tier->stack1
+	StackSize >= 150
+	BaseType == "Gold"
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255 
+	SetBackgroundColor 20 20 0 255 
+	MinimapIcon 2 Grey Cross
+
+Show # $type->gold $tier->stacklvl1
+	StackSize >= 50
+	BaseType == "Gold"
+	AreaLevel <= 68
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255 
+	SetBackgroundColor 20 20 0 255 
+	MinimapIcon 2 Grey Cross
+
+Show # $type->gold $tier->anyother
+	BaseType == "Gold"
+	SetFontSize 35
+	SetTextColor 180 180 180 255
+	SetBorderColor 0 0 0 255 
+	SetBackgroundColor 20 20 0 180 
+	MinimapIcon 2 Grey Cross

@@ -1,0 +1,307 @@
+# https://www.pathofexile.com/item-filter/about
+# https://pathofexile.fandom.com/wiki/Guide:Item_filter
+
+# TODO: Import does not exist in PoE2
+
+#===============================================================================================================
+# Gold
+#===============================================================================================================
+
+Show # $type->gold $tier->stack3
+	StackSize >= 3001
+	BaseType == "Gold"
+	SetFontSize 45
+	SetTextColor 235 200 110 255 
+	SetBorderColor 235 200 110 255 
+	SetBackgroundColor 20 20 0 255 
+	PlayAlertSound 2 300
+	PlayEffect Orange
+	MinimapIcon 1 Yellow Cross
+
+Show # $type->gold $tier->stack2
+	StackSize >= 500
+	BaseType == "Gold"
+	SetFontSize 45
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255 
+	SetBackgroundColor 20 20 0 255 
+	PlayEffect Orange Temp
+	MinimapIcon 1 White Cross
+
+Show # $type->gold $tier->stack1
+	StackSize >= 150
+	BaseType == "Gold"
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255 
+	SetBackgroundColor 20 20 0 255 
+	MinimapIcon 2 Grey Cross
+
+Show # $type->gold $tier->stacklvl1
+	StackSize >= 50
+	BaseType == "Gold"
+	AreaLevel <= 68
+	SetFontSize 40
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255 
+	SetBackgroundColor 20 20 0 255 
+	MinimapIcon 2 Grey Cross
+
+Show # $type->gold $tier->anyother
+	BaseType == "Gold"
+	SetFontSize 35
+	SetTextColor 180 180 180 255
+	SetBorderColor 0 0 0 255 
+	SetBackgroundColor 20 20 0 180 
+	MinimapIcon 2 Grey Cross
+
+#===============================================================================================================
+# Base Normal and Magic  and Rare
+#===============================================================================================================
+
+Show 
+	Rarity Normal
+	SetTextColor 180 180 180 
+	SetBorderColor 0 0 0 
+	SetBackgroundColor 20 20 0 180 
+    Continue
+
+Show 
+	Rarity Magic
+	# SetTextColor 180 180 180
+	SetBorderColor 100 100 100 150 
+	# SetBackgroundColor 20 20 0 180 
+    # SetBorderColor 255 255 255 255 
+    Continue
+
+Show # All rares
+	Rarity Rare
+	SetFontSize 45
+	# SetBackgroundColor 20 20 0 255 
+	PlayAlertSound 8 300
+	PlayEffect Yellow
+	MinimapIcon 2 Yellow Diamond
+    Continue
+
+Show # All uniques
+	Rarity Unique
+	SetFontSize 45
+	# SetTextColor 175 96 37 255 
+	# SetBorderColor 175 96 37 255 
+	# SetBackgroundColor 20 20 0 255 
+	PlayAlertSound 3 300
+	PlayEffect Brown
+	MinimapIcon 2 Brown Star
+    Continue
+
+# resistances? Magicfind?
+
+#===============================================================================================================
+# Currency
+#===============================================================================================================
+
+Show
+	StackSize >= 10
+	Class == "Stackable Currency"
+	BaseType == "Scroll of Wisdom"
+	SetFontSize 45
+	SetBorderColor 200 100 60 255 
+	SetBackgroundColor 30 5 5 255 
+    PlayEffect White
+	MinimapIcon 2 White Circle
+
+Show
+	StackSize >= 5
+	Class == "Stackable Currency"
+	BaseType == "Scroll of Wisdom"
+	SetFontSize 45
+	SetBorderColor 200 100 60 255 
+	SetBackgroundColor 30 5 5 255 
+    PlayEffect White
+	MinimapIcon 2 White Circle
+
+Show
+	StackSize >= 3
+	Class == "Stackable Currency"
+	BaseType == "Scroll of Wisdom"
+	SetFontSize 40
+	SetBorderColor 100 50 30 255 
+	SetBackgroundColor 20 20 0 255 
+    PlayEffect White
+	MinimapIcon 2 White Circle
+
+Show
+	Class == "Stackable Currency"
+	BaseType == "Scroll of Wisdom"
+	SetFontSize 35
+	SetBorderColor 100 50 30 255 
+	SetBackgroundColor 20 20 0 255 
+    PlayEffect White
+	MinimapIcon 2 White Circle
+ 
+
+
+ Show 
+	Class == "Stackable Currency"
+	BaseType == "Armourer's Scrap"
+	SetFontSize 45
+	SetTextColor 0 0 0 255 
+	SetBorderColor 0 0 0 255 
+	SetBackgroundColor 210 178 135 255 
+
+Show 
+	Class == "Stackable Currency"
+	BaseType == "Regal Shard"
+	SetFontSize 45
+	SetTextColor 190 178 135 255 
+	SetBorderColor 190 178 135 255 
+	SetBackgroundColor 20 20 0 255 
+
+Show 
+	Class == "Stackable Currency"
+	BaseType == "Regal Orb" 
+	SetFontSize 45
+	SetTextColor 0 0 0 255 
+	SetBorderColor 0 0 0 255 
+	SetBackgroundColor 213 159 0 255 
+	PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 2 White Circle
+
+Show 
+	Class == "Stackable Currency"
+	BaseType == "Exalted Orb"
+	SetFontSize 45 
+	SetTextColor 255 0 0 255 
+	SetBorderColor 255 0 0 255 
+	SetBackgroundColor 255 255 255 255 
+	PlayAlertSound 6 300
+	PlayEffect Red
+	MinimapIcon 0 Red Star
+
+Show 
+	Class == "Stackable Currency"
+	BaseType == "Artificer's Orb"
+	SetFontSize 45 
+	SetTextColor 255 0 255 255 
+	SetBorderColor 255 0 255 255 
+	SetBackgroundColor 100 0 100 255 
+	PlayAlertSound 6 300
+	PlayEffect Pink
+	MinimapIcon 0 Pink Circle
+
+# Orb of Alchemy - upgrades normal to rare with 4 modifiers
+# Orb of Transmutation - normal => magic 1 modifier
+# Orb of Augmentation - magic => 1 random modifier
+
+ Show # Fallback for all other currencies
+	Class == "Stackable Currency"
+	SetFontSize 40
+	SetTextColor 0 0 0 255
+	SetBorderColor 0 0 0 255 
+	SetBackgroundColor 180 76 58 255 
+	#PlayAlertSound 2 300
+	PlayEffect White
+	MinimapIcon 2 White Circle
+
+#===============================================================================================================
+# Skill Gems
+#===============================================================================================================
+# Show 
+# 	BaseType == "Uncut Skill Gem"
+# 	SetTextColor 180 180 180 
+# 	SetBorderColor 0 0 0 
+# 	SetBackgroundColor 20 20 0 180 
+#     PlayEffect White
+# 	MinimapIcon 2 White Circle
+
+Show 
+	BaseType == "Uncut Skill Gem" "Uncut Support Gem"
+	SetFontSize 30
+	SetTextColor 40 130 130 255 
+	SetBorderColor 0 0 0 
+    PlayEffect Grey 
+
+Show 
+	Class == "Skill Gems" "Support Gems"
+	SetFontSize 35
+	SetTextColor 40 130 130 255 
+	SetBorderColor 0 0 0 
+    PlayEffect Grey 
+
+# TODO: Color support gems differently
+
+#===============================================================================================================
+# Runes
+#===============================================================================================================
+Show 
+	BaseType "Rune"
+	SetFontSize 45
+	SetTextColor 255 0 255 255 
+	SetBorderColor 255 0 255 255 
+	SetBackgroundColor 100 0 100 255 
+	PlayAlertSound 3 300
+	PlayEffect Pink
+	MinimapIcon 0 Pink Circle
+
+#===============================================================================================================
+# Base Item Types
+#===============================================================================================================
+Show 
+	Class == "Amulets" "Belts" "Rings" "Charm"
+	# AreaLevel <= 16
+	# SetFontSize 40
+	SetBorderColor 255 255 255 255
+	# SetBackgroundColor 20 20 0 255
+    Continue
+
+Show 
+	Class == "Quivers" "Bows"
+	# AreaLevel <= 16
+	# SetFontSize 40
+	SetBorderColor 0 150 0 255
+	SetBackgroundColor 4 67 4 210
+    Continue
+
+Show 
+	Class == "Boots"
+	# AreaLevel <= 16
+	# SetFontSize 40
+	SetBorderColor 0 240 190 255
+	SetBackgroundColor 20 20 0 255
+    Continue
+
+Show # %D4 $type->leveling->normalmagic->act1 $tier->casterweapons
+	Class == "Sceptres" "Wands"
+	SetBorderColor 0 120 120 255
+	SetBackgroundColor 20 20 0 255
+	# PlayEffect Grey Temp
+    Continue
+
+# Flasks
+Show 
+	Class == "Life Flasks"
+	SetFontSize 40
+	SetBorderColor 120 0 0 255
+    Continue
+
+Show 
+	Class == "Mana Flasks"
+	SetFontSize 40
+	SetBorderColor 0 0 120 255
+    Continue
+
+#===============================================================================================================
+# Quest Items
+#===============================================================================================================
+
+
+Show 
+	Class == "Quest Items"
+	SetFontSize 45
+	SetTextColor 74 230 58 255 
+	SetBorderColor 74 230 58 255 
+	SetBackgroundColor 20 20 0 255
+	PlayAlertSound 3 300
+	PlayEffect Green
+	MinimapIcon 0 Green Pentagon

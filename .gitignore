@@ -1,0 +1,4 @@
+/poe2_production
+*.ini
+
+!*.filter
