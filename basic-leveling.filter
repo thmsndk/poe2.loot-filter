@@ -243,11 +243,11 @@ Show # slightly more important rares
     # MinimapIcon 1 Yellow Diamond
 
 Show 
-	Class == "Quivers" "Bows"
+	Class == "Quivers" "Bows" "Crossbows"
 	# AreaLevel <= 16
 	# SetFontSize 40
 	SetBorderColor 0 150 0 255
-	SetBackgroundColor 4 67 4 210
+	#SetBackgroundColor 4 67 4 210
     Continue
 
 Show 
@@ -255,13 +255,13 @@ Show
 	# AreaLevel <= 16
 	# SetFontSize 40
 	SetBorderColor 0 240 190 255
-	SetBackgroundColor 20 20 0 255
+	#SetBackgroundColor 20 20 0 255
     Continue
 
 Show # caster weapons
 	Class == "Sceptres" "Wands"
 	SetBorderColor 0 120 120 255
-	SetBackgroundColor 20 20 0 255
+	#SetBackgroundColor 20 20 0 255
 	# PlayEffect Grey Temp
     Continue
 
