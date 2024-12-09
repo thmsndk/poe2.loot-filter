@@ -16,7 +16,6 @@ Show # Base gold style
     SetTextColor 180 180 180 
     SetBorderColor 0 0 0 255
     SetBackgroundColor 0 0 0 180
-    Continue
 
 Show # Large stacks override
     StackSize >= 500
