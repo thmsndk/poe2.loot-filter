@@ -34,6 +34,20 @@ Show
 	SetBackgroundColor 20 20 0 180 
     Continue
 
+Show
+    Sockets > 0
+    Rarity Normal
+    SetBorderColor 200 200 200 255
+    #SetFontSize 35
+    Continue
+
+Show
+    Quality > 10
+    Rarity Normal
+    SetBorderColor 200 200 200 255
+    #SetFontSize 35
+    Continue
+
 Show 
 	Rarity Magic
     SetFontSize 30
@@ -41,6 +55,20 @@ Show
 	SetBorderColor 100 100 100 150 
 	# SetBackgroundColor 20 20 0 180 
     # SetBorderColor 255 255 255 255 
+    Continue
+
+Show
+    Sockets > 0
+    Rarity Magic
+    SetBorderColor 0 0 200 255
+    #SetFontSize 35
+    Continue
+
+Show
+    Quality > 10
+    Rarity Magic
+    SetBorderColor 0 0 200 255
+    #SetFontSize 35
     Continue
 
 Show # All rares
@@ -80,10 +108,10 @@ Show # All uniques
 Show # Scroll of Wisdom below lvl 10 is important
     Class == "Stackable Currency"
 	BaseType == "Scroll of Wisdom"
-    AreaLevel <= 10
+    AreaLevel <= 10 # At ~lvl 10 we unlock the hooded one that can identify items
     SetFontSize 30
+    Continue
 
-# Scroll of Wisdom -At ~lvl 10 we unlock the hooded one that can identify items, unsure if we need scrolls of wisdom after that point
 Show
 	Class == "Stackable Currency"
 	BaseType == "Scroll of Wisdom"
