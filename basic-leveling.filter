@@ -187,7 +187,7 @@ Show
     MinimapIcon 1 White Circle
 
 #===============================================================================================================
-# Uncut Gems
+# Gems
 #===============================================================================================================
 # Show 
 # 	BaseType == "Uncut Skill Gem"
@@ -199,6 +199,15 @@ Show
 
 Show 
 	BaseType "Uncut "
+	SetFontSize 30
+    SetTextColor 20 240 240 
+    SetBorderColor 20 240 240 
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+
+Show 
+	Class "Gems"
 	SetFontSize 30
     SetTextColor 20 240 240 
     SetBorderColor 20 240 240 
