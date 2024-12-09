@@ -3,28 +3,30 @@
 
 # TODO: Import does not exist in PoE2
 
-Show
+Show # Base font size for all items
     SetFontSize 25
     Continue
+
 #===============================================================================================================
 # Gold
 #===============================================================================================================
 
-Show
-    StackSize >= 500
-    BaseType == "Gold"
-    SetTextColor 255 255 255 
-    SetBorderColor 255 255 255 
-    PlayEffect Orange Temp
-
-Show
+Show # Base gold style
     BaseType == "Gold"
     SetTextColor 180 180 180 
     SetBorderColor 0 0 0 255
     SetBackgroundColor 0 0 0 180
+    Continue
+
+Show # Large stacks override
+    StackSize >= 500
+    BaseType == "Gold"
+    SetTextColor 255 255 255 
+    SetBorderColor 255 255 255 
+    PlayEffect orange Temp
 
 #===============================================================================================================
-# Base Normal and Magic  and Rare
+# Base Rarity styles (Normal, Magic, Rare, Unique)
 #===============================================================================================================
 
 Show 
@@ -34,18 +36,18 @@ Show
 	SetBackgroundColor 20 20 0 180 
     Continue
 
-Show
+Show # salvagable item
     Sockets > 0
     Rarity Normal
     SetBorderColor 200 200 200 255
-    #SetFontSize 35
+    SetFontSize 30
     Continue
 
-Show
+Show # salvagable item
     Quality > 10
     Rarity Normal
     SetBorderColor 200 200 200 255
-    #SetFontSize 35
+    SetFontSize 30
     Continue
 
 Show 
@@ -57,18 +59,18 @@ Show
     # SetBorderColor 255 255 255 255 
     Continue
 
-Show
+Show # salvagable item
     Sockets > 0
     Rarity Magic
     SetBorderColor 0 0 200 255
-    #SetFontSize 35
+    SetFontSize 35
     Continue
 
-Show
+Show # salvagable item
     Quality > 10
     Rarity Magic
     SetBorderColor 0 0 200 255
-    #SetFontSize 35
+    SetFontSize 35
     Continue
 
 Show # All rares
@@ -96,104 +98,94 @@ Show # All uniques
 # Currency
 #===============================================================================================================
  Show # Fallback for all other currencies
-	Class == "Stackable Currency"
-	# SetFontSize 20
-	#SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255 
-	SetBackgroundColor 180 76 58 255 
-	PlayEffect white Temp
-	MinimapIcon 2 White Circle
+	Class == "Currency"
+    SetTextColor 255 207 132 
+    SetBorderColor 255 207 132 
     Continue
 
 Show # Scroll of Wisdom below lvl 10 is important
-    Class == "Stackable Currency"
+    Class == "Currency"
 	BaseType == "Scroll of Wisdom"
     AreaLevel <= 10 # At ~lvl 10 we unlock the hooded one that can identify items
     SetFontSize 30
     Continue
 
+# Show
+# 	Class == "Currency"
+# 	BaseType == "Scroll of Wisdom"
+# 	# SetFontSize 20
+# 	SetBorderColor 100 50 30 255 
+# 	SetBackgroundColor 20 20 0 255 
+#     PlayEffect white
+# 	MinimapIcon 2 White Circle
+#     Continue
+# 
+# Show
+# 	StackSize >= 5
+# 	Class == "Currency"
+# 	BaseType == "Scroll of Wisdom"
+# 	# SetFontSize 30
+# 	SetBorderColor 200 100 60 255 
+# 	SetBackgroundColor 30 5 5 255 
+#     Continue
+# 
+# Show
+# 	StackSize >= 3
+# 	Class == "Currency"
+# 	BaseType == "Scroll of Wisdom"
+# 	# SetFontSize 25
+# 	SetBorderColor 100 50 30 255 
+# 	SetBackgroundColor 20 20 0 255 
+#     Continue
+
+# Currency Tier A: Gemcutter, Annullment
 Show
-	Class == "Stackable Currency"
-	BaseType == "Scroll of Wisdom"
-	# SetFontSize 20
-	SetBorderColor 100 50 30 255 
-	SetBackgroundColor 20 20 0 255 
+    Class "Currency"
+    BaseType "Gemcutter's Prism" "Orb of Annulment" "Orb of Chance"
+    SetTextColor 255 255 255 255
+    SetBorderColor 255 255 255 255
+    SetBackgroundColor 240 90 35
+    PlayAlertSound 1 300
     PlayEffect white
-	MinimapIcon 2 White Circle
-    Continue
+    MinimapIcon 1 White Circle
+    SetFontSize 40
+
+# Currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+    Class "Currency"
+    BaseType "Vaal Orb" "Greater Jeweller's Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Exotic" "Exalted Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" 
+    SetBackgroundColor 76 51 12 
+    PlayAlertSound 2 300
+    PlayEffect white
+    MinimapIcon 1 White Circle
+    SetFontSize 40
 
 Show
-	StackSize >= 5
-	Class == "Stackable Currency"
-	BaseType == "Scroll of Wisdom"
-	# SetFontSize 30
-	SetBorderColor 200 100 60 255 
-	SetBackgroundColor 30 5 5 255 
-    Continue
+    Class "Currency"
+    BaseType "Distilled" "Catalyst" "Essence of" "Omen of"
+    SetBackgroundColor 76 51 12 
+    PlayAlertSound 2 300
+    PlayEffect white
+    MinimapIcon 1 White Circle
+
+# Currency Tier C: Vaal, Chaos, Exalt, Exotic
+Show
+    Class "Currency"
+    BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard"
+    MinimapIcon 2 Grey Circle
 
 Show
-	StackSize >= 3
-	Class == "Stackable Currency"
-	BaseType == "Scroll of Wisdom"
-	# SetFontSize 25
-	SetBorderColor 100 50 30 255 
-	SetBackgroundColor 20 20 0 255 
-    Continue
+    Class "Currency"
+    BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact"
+    MinimapIcon 2 Grey Circle
 
- Show 
-	Class == "Stackable Currency"
-	BaseType == "Armourer's Scrap"
-	# SetFontSize 20
-	SetTextColor 0 0 0 255 
-	SetBorderColor 0 0 0 255 
-	SetBackgroundColor 210 178 135 255 
-
-Show 
-	Class == "Stackable Currency"
-	BaseType == "Regal Shard"
-	# SetFontSize 20
-	SetTextColor 190 178 135 255 
-	SetBorderColor 190 178 135 255 
-	SetBackgroundColor 20 20 0 255 
-
-Show 
-	Class == "Stackable Currency"
-	BaseType == "Regal Orb" 
-	# SetFontSize 20
-	SetTextColor 0 0 0 255 
-	SetBorderColor 0 0 0 255 
-	SetBackgroundColor 213 159 0 255 
-	PlayAlertSound 2 300
-	PlayEffect white
-	MinimapIcon 2 White Circle
-
-Show 
-	Class == "Stackable Currency"
-	BaseType == "Exalted Orb"
-	# SetFontSize 20 
-	SetTextColor 255 0 0 255 
-	SetBorderColor 255 0 0 255 
-	SetBackgroundColor 255 255 255 255 
-	PlayAlertSound 6 300
-	PlayEffect red
-	MinimapIcon 0 Red Star
-
-Show 
-	Class == "Stackable Currency"
-	BaseType == "Artificer's Orb"
-	# SetFontSize 20 
-	SetTextColor 255 0 255 255 
-	SetBorderColor 255 0 255 255 
-	SetBackgroundColor 100 0 100 255 
-	PlayAlertSound 6 300
-	PlayEffect pink
-	MinimapIcon 0 Pink Circle
-
-# Orb of Alchemy - upgrades normal to rare with 4 modifiers
-# Orb of Transmutation - normal => magic 1 modifier
-# Orb of Augmentation - magic => 1 random modifier
-
-
+# Unknown currency
+Show
+    Class "Currency"
+    SetBackgroundColor 76 51 12 
+    PlayAlertSound 2 300
+    PlayEffect Pink
+    MinimapIcon 1 White Circle
 
 #===============================================================================================================
 # Uncut Gems
@@ -218,28 +210,24 @@ Show
 # TODO: Color support gems differently
 
 #===============================================================================================================
-# Runes
-#===============================================================================================================
-Show 
-	BaseType "Rune"
-	#SetFontSize 20 
-	SetTextColor 255 0 255 255 
-	SetBorderColor 255 0 255 255 
-	SetBackgroundColor 100 0 100 255 
-	#PlayAlertSound 3 300
-	PlayEffect pink Temp
-	MinimapIcon 0 Pink Circle
-
-#===============================================================================================================
 # Base Item Types
 #===============================================================================================================
-Show 
-	Class == "Amulets" "Belts" "Rings" "Charm"
-	# AreaLevel <= 16
-	# SetFontSize 40
-	SetBorderColor 255 255 255 255
-	# SetBackgroundColor 20 20 0 255
-    Continue
+ Show 
+ 	Class == "Amulets" "Belts" "Rings" "Charm"
+ 	# AreaLevel <= 16
+ 	# SetFontSize 40
+ 	SetBorderColor 255 255 255 255
+ 	# SetBackgroundColor 20 20 0 255
+     Continue
+
+Show # slightly more important rares
+    Class "Rings" "Amulets" "Belts"
+    Rarity Rare
+    SetFontSize 35
+    # SetTextColor 233 206 75 
+    # SetBorderColor 233 206 75 
+    # PlayEffect Yellow
+    # MinimapIcon 1 Yellow Diamond
 
 Show 
 	Class == "Quivers" "Bows"
@@ -279,15 +267,19 @@ Show
     SetBackgroundColor 0 0 120 180
     Continue
 
-Show
-    Sockets >= 1
-    PlayEffect Pink
-    Continue
+Show 
+	BaseType "Rune"
+	#SetFontSize 20 
+	SetTextColor 255 0 255 255 
+	SetBorderColor 255 0 255 255 
+	SetBackgroundColor 100 0 100 255 
+	#PlayAlertSound 3 300
+	PlayEffect pink Temp
+	MinimapIcon 0 Pink Circle
 
 #===============================================================================================================
 # Quest Items
 #===============================================================================================================
-
 
 Show 
 	Class == "Quest Items"
