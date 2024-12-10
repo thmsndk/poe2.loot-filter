@@ -157,7 +157,7 @@ Show
 # Currency Tier B: Vaal, Chaos, Exalt, Exotic
 Show
     Class "Currency"
-    BaseType "Vaal Orb" "Greater Jeweller's Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Exotic" "Exalted Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" 
+    BaseType "Vaal Orb" "Greater Jeweller's Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Exotic" "Exalted Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" "Orb of Chance"
     SetBackgroundColor 76 51 12 
     PlayAlertSound 2 300
     PlayEffect white
@@ -175,7 +175,7 @@ Show
 # Currency Tier C: Vaal, Chaos, Exalt, Exotic
 Show
     Class "Currency"
-    BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard"
+    BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Chance Shard"
     MinimapIcon 2 Grey Circle
 
 Show
