@@ -291,6 +291,30 @@ Show
 	MinimapIcon 0 Pink Circle
 
 #===============================================================================================================
+# Fragments
+#===============================================================================================================
+
+Show
+    BaseType "Simulacrum" " Tablet" "Breachstone" "Barya" "Ultimatum" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook"
+    SetTextColor 255 207 255 255
+    SetBorderColor 255 207 255 255
+    SetBackgroundColor 65 20 80 255
+    PlayAlertSound 2 300
+    PlayEffect White
+    MinimapIcon 1 White Square
+    SetFontSize 40
+
+Show
+    BaseType "Waystone"
+    Rarity <= Rare
+    SetTextColor 255 255 255 255
+    SetBorderColor 255 255 255 255
+    PlayAlertSound 4 300
+    PlayEffect White
+    MinimapIcon 1 White Square
+    SetFontSize 40
+
+#===============================================================================================================
 # Quest Items
 #===============================================================================================================
 
