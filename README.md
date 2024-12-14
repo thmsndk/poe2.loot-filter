@@ -54,7 +54,7 @@ Each filter section is clearly commented for easy modification:
 For the best development experience, install these recommended extensions:
 
 - [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight) - Visualize color codes in your filter
-- [PoE Filter Language Support](https://marketplace.visualstudio.com/items?itemName=neversink.poe-filter-language) - Syntax highlighting and language support for Path of Exile item filters
+- [PoE Filter Language Support](https://marketplace.visualstudio.com/items?itemName=thmsn.poe2-filter) - Syntax highlighting and language support for Path of Exile item filters
 
 These extensions are configured in the `.vscode/extensions.json` file and VS Code will automatically suggest installing them when you open the project.
 
