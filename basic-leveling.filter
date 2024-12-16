@@ -12,19 +12,18 @@ Show # Base font size for all items
 # Gold
 #===============================================================================================================
 
-Show # Base gold style
-    BaseType == "Gold"
-    SetTextColor 180 180 180
-    SetBorderColor 0 0 0 255
-    SetBackgroundColor 0 0 0 180
-    Continue
-
 Show # Large stacks override
     StackSize >= 500
     BaseType == "Gold"
     SetTextColor 255 255 255
     SetBorderColor 255 255 255
     PlayEffect orange Temp
+
+Show # Base gold style
+    BaseType == "Gold"
+    SetTextColor 180 180 180
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 0 0 0 180
 
 #===============================================================================================================
 # Base Rarity styles (Normal, Magic, Rare, Unique)
