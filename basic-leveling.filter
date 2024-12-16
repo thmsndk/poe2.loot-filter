@@ -109,6 +109,8 @@ Show # Scroll of Wisdom below lvl 10 is important
     Class == "Currency"
     BaseType == "Scroll of Wisdom"
     AreaLevel <= 10 # At ~lvl 10 we unlock the hooded one that can identify items
+    PlayEffect Yellow Temp
+    MinimapIcon 1 Yellow Circle
     SetFontSize 30
 
 Show # Scroll of Wisdom below lvl 10 is important
