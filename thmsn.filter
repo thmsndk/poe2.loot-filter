@@ -180,6 +180,16 @@ Show # Exalt
     MinimapIcon 1 Yellow Circle
     SetFontSize 40
 
+Show
+    BaseType "Gold Key" "Silver Key" "Bronze Key"
+    SetTextColor 255 207 132
+    SetBorderColor 255 207 132
+    SetBackgroundColor 76 51 12
+    PlayAlertSound 2 300
+    PlayEffect White
+    MinimapIcon 2 White Circle
+    SetFontSize 40
+
 Show # Regal, Vaal ...
     Class "Currency"
     BaseType "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy"
@@ -286,6 +296,15 @@ Show
 
 Show # Level 19 gems and up in maps get a special highlight
     BaseType "Uncut Skill Gem"
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 40
+
+Show # Skill Gems - Drops on beach, unsure if it drops elsewhere
+    Class "Skill Gems"
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
     PlayAlertSound 2 300
