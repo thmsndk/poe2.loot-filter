@@ -56,7 +56,7 @@ Show # Salvageable Socketed Normal items
     Continue
 
 Show # Salvageable Quality Normal items
-    Quality > 10
+    Quality > 1
     Rarity Normal
     SetBorderColor 200 200 200 255
     SetFontSize 30
@@ -80,7 +80,7 @@ Show # Salvageable Socketed Magic items
     Continue
 
 Show # Salvageable Quality Magic items
-    Quality > 10
+    Quality > 1
     Rarity Magic
     SetBorderColor 0 0 200 255
     SetFontSize 35
