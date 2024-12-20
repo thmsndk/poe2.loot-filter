@@ -86,6 +86,7 @@ Show # Salvageable Quality Magic items
     SetFontSize 35
     Continue
 
+# All rares
 Show # All rares
     Rarity Rare
     SetFontSize 30
@@ -95,13 +96,15 @@ Show # All rares
     MinimapIcon 2 Yellow Diamond
     Continue
 
+# All uniques
 Show # All uniques
     Rarity Unique
     SetFontSize 35
     SetTextColor 175 96 37 255
     SetBorderColor 175 96 37 255
     SetBackgroundColor 53 13 13 255
-    PlayAlertSound 3 300
+    #PlayAlertSound 3 300
+    CustomAlertSound "sounds/GladOS/Unique1.wav" 300
     PlayEffect Brown
     MinimapIcon 2 Brown Star
     Continue
@@ -139,7 +142,7 @@ Show # Divine Orb Style
     SetTextColor 255 0 0 255
     SetBorderColor 255 0 0 255
     SetBackgroundColor 255 255 255 255
-    PlayAlertSound 6 300
+    CustomAlertSound "sounds/GladOS/Currency_Exceptional.wav" 300
     PlayEffect Red
     MinimapIcon 0 Red Star
 
@@ -149,7 +152,7 @@ Show
     SetTextColor 255 0 0 255
     SetBorderColor 255 0 0 255
     SetBackgroundColor 255 255 255 255
-    PlayAlertSound 6 300
+    CustomAlertSound "sounds/GladOS/Currency_Exceptional.wav" 300
     PlayEffect Red
     MinimapIcon 0 Red Star
 
@@ -163,7 +166,8 @@ Show # Currency Tier A: Annullment
     SetTextColor 255 255 255 255
     SetBorderColor 255 255 255 255
     SetBackgroundColor 240 90 35
-    PlayAlertSound 1 300
+    #PlayAlertSound 1 300
+    CustomAlertSound "sounds/GladOS/Currency_Valuable_CraftingAttempts.wav" 300
     PlayEffect White
     MinimapIcon 1 Yellow Circle
     SetFontSize 40
@@ -175,7 +179,8 @@ Show # Exalt
     SetTextColor 255 207 92
     SetBorderColor 255 207 92
     SetBackgroundColor 76 51 12
-    PlayAlertSound 2 300
+    #PlayAlertSound 2 300
+    CustomAlertSound "sounds/GladOS/Currency_Important.wav" 300
     PlayEffect Yellow
     MinimapIcon 1 Yellow Circle
     SetFontSize 40
@@ -185,7 +190,8 @@ Show
     SetTextColor 255 207 132
     SetBorderColor 255 207 132
     SetBackgroundColor 76 51 12
-    PlayAlertSound 2 300
+    #PlayAlertSound 2 300
+    CustomAlertSound "sounds/GladOS/Currency_Important.wav" 300
     PlayEffect White
     MinimapIcon 2 White Circle
     SetFontSize 40
@@ -194,7 +200,8 @@ Show # Regal, Vaal ...
     Class "Currency"
     BaseType "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy"
     SetBackgroundColor 76 51 12
-    PlayAlertSound 2 300
+    #PlayAlertSound 2 300
+    CustomAlertSound "sounds/GladOS/Currency_Important.wav" 300
     PlayEffect White
     MinimapIcon 2 White Circle
     SetFontSize 40
@@ -203,7 +210,8 @@ Show
     Class "Currency"
     BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact"
     SetBackgroundColor 76 51 12
-    PlayAlertSound 2 100
+    #PlayAlertSound 2 100
+    CustomAlertSound "sounds/GladOS/Currency_Important.wav" 100
     PlayEffect White Temp
     MinimapIcon 1 White Kite
     SetFontSize 35
@@ -243,7 +251,8 @@ Show
 Show # Unknown currency
     Class "Currency"
     SetBackgroundColor 76 51 12
-    PlayAlertSound 2 300
+    #PlayAlertSound 2 300
+    CustomAlertSound "sounds/GladOS/Unknown_002.wav" 300
     PlayEffect Pink
     MinimapIcon 1 White Circle
 
@@ -255,7 +264,8 @@ Show # Always make Spirit gems pop
     BaseType "Uncut Spirit Gem"
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    PlayAlertSound 2 300
+    #PlayAlertSound 2 300
+    CustomAlertSound "sounds/GladOS/SpiritGem_Uncut.wav" 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 40
@@ -265,7 +275,8 @@ Show # Make support gems pop during campaign
     AreaLevel < 68
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    PlayAlertSound 2 300
+    #PlayAlertSound 2 300
+    CustomAlertSound "sounds/GladOS/UncutSupportGem_Specific1.wav" 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 40
@@ -275,7 +286,8 @@ Show # Make skill gems pop during campaign
     AreaLevel < 65
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    PlayAlertSound 2 300
+    #PlayAlertSound 2 300
+    CustomAlertSound "sounds/GladOS/UncutSkillGem_Detected_Long.wav" 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 40
@@ -298,7 +310,8 @@ Show # Level 19 gems and up in maps get a special highlight
     BaseType "Uncut Skill Gem"
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    PlayAlertSound 2 300
+    #PlayAlertSound 2 300
+    CustomAlertSound "sounds/GladOS/UncutSkillGem_Detected_Long.wav" 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 40
@@ -376,7 +389,8 @@ Show # Special A Tier - League specific socketables and jewels
     SetBorderColor 0 240 190
     SetFontSize 45
     MinimapIcon 0 Cyan Diamond
-    PlayAlertSound 2 300
+    #PlayAlertSound 2 300
+    CustomAlertSound "sounds/GladOS/Special_Item_Detected.wav" 300
     PlayEffect Cyan
 
 ## Special Highlight - Breach Rings
@@ -415,7 +429,8 @@ Show # Special A Tier - Rare Jewels
     SetFontSize 40
     MinimapIcon 1 Cyan Diamond
     PlayEffect Cyan
-    PlayAlertSound 2 300
+    #PlayAlertSound 2 300
+    CustomAlertSound "sounds/GladOS/Jewel_Valuable.wav" 300
 
 Show # Special B Tier - Any Runes and Charms
     BaseType " Rune" " Charm"
@@ -431,7 +446,8 @@ Show
     SetTextColor 255 207 255
     SetBorderColor 255 207 255
     SetBackgroundColor 65 20 80
-    PlayAlertSound 2 300
+    #PlayAlertSound 2 300
+    CustomAlertSound "sounds/GladOS/Pinnacle_001.wav" 300
     PlayEffect White
     MinimapIcon 1 Yellow Square
     SetFontSize 40
@@ -483,7 +499,8 @@ Show
     Rarity <= Rare
     SetTextColor 255 255 255
     SetBorderColor 255 255 255
-    PlayAlertSound 4 300
+    #PlayAlertSound 4 300
+    CustomAlertSound "sounds/GladOS/Waystone_Detected001.wav" 300
     PlayEffect White
     MinimapIcon 1 White Square
     SetFontSize 40
@@ -498,6 +515,7 @@ Show
     SetTextColor 74 230 58 255
     SetBorderColor 74 230 58 255
     SetBackgroundColor 20 20 0 255
-    PlayAlertSound 3 300
+    #PlayAlertSound 3 300
+    CustomAlertSound "sounds/GladOS/Quest_Item2.wav" 300
     PlayEffect Green
     MinimapIcon 0 Green Pentagon
