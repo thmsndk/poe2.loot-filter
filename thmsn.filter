@@ -91,7 +91,8 @@ Show # All rares
     Rarity Rare
     SetFontSize 30
     #SetBackgroundColor 20 20 0 255
-    PlayAlertSound 8 300
+    #PlayAlertSound 8 300
+    CustomAlertSound "sounds/GladOS/rare_disappointment_imminent__340e5f.wav" 300
     PlayEffect Yellow
     MinimapIcon 2 Yellow Diamond
     Continue
@@ -171,8 +172,8 @@ Show # Currency Tier A: Annullment
     SetTextColor 255 255 255 255
     SetBorderColor 255 255 255 255
     SetBackgroundColor 240 90 35
-    #PlayAlertSound 1 300
-    CustomAlertSound "sounds/GladOS/Currency_Valuable_CraftingAttempts.wav" 300
+    PlayAlertSound 1 300
+    #CustomAlertSound "sounds/GladOS/Currency_Valuable_CraftingAttempts.wav" 300
     PlayEffect White
     MinimapIcon 1 Yellow Circle
     SetFontSize 40
@@ -184,8 +185,8 @@ Show # Exalt
     SetTextColor 255 207 92
     SetBorderColor 255 207 92
     SetBackgroundColor 76 51 12
-    #PlayAlertSound 2 300
-    CustomAlertSound "sounds/GladOS/Currency_Important.wav" 300
+    PlayAlertSound 2 300
+    #CustomAlertSound "sounds/GladOS/Currency_Important.wav" 300
     PlayEffect Yellow
     MinimapIcon 1 Yellow Circle
     SetFontSize 40
@@ -195,8 +196,8 @@ Show
     SetTextColor 255 207 132
     SetBorderColor 255 207 132
     SetBackgroundColor 76 51 12
-    #PlayAlertSound 2 300
-    CustomAlertSound "sounds/GladOS/Currency_Important.wav" 300
+    PlayAlertSound 2 300
+    #CustomAlertSound "sounds/GladOS/Currency_Important.wav" 300
     PlayEffect White
     MinimapIcon 2 White Circle
     SetFontSize 40
@@ -205,8 +206,8 @@ Show # Regal, Vaal ...
     Class "Currency"
     BaseType "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy"
     SetBackgroundColor 76 51 12
-    #PlayAlertSound 2 300
-    CustomAlertSound "sounds/GladOS/Currency_Important.wav" 300
+    PlayAlertSound 2 300
+    #CustomAlertSound "sounds/GladOS/Currency_Important.wav" 300
     PlayEffect White
     MinimapIcon 2 White Circle
     SetFontSize 40
@@ -215,8 +216,8 @@ Show
     Class "Currency"
     BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact"
     SetBackgroundColor 76 51 12
-    #PlayAlertSound 2 100
-    CustomAlertSound "sounds/GladOS/Currency_Important.wav" 100
+    PlayAlertSound 2 100
+    #CustomAlertSound "sounds/GladOS/Currency_Important.wav" 100
     PlayEffect White Temp
     MinimapIcon 1 White Kite
     SetFontSize 35
@@ -269,8 +270,8 @@ Show # Always make Spirit gems pop
     BaseType "Uncut Spirit Gem"
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    #PlayAlertSound 2 300
-    CustomAlertSound "sounds/GladOS/SpiritGem_Uncut.wav" 300
+    PlayAlertSound 2 300
+    #CustomAlertSound "sounds/GladOS/SpiritGem_Uncut.wav" 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 40
@@ -280,8 +281,8 @@ Show # Make support gems pop during campaign
     AreaLevel < 68
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    #PlayAlertSound 2 300
-    CustomAlertSound "sounds/GladOS/UncutSupportGem_Specific1.wav" 300
+    PlayAlertSound 2 300
+    #CustomAlertSound "sounds/GladOS/UncutSupportGem_Specific1.wav" 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 40
@@ -291,15 +292,15 @@ Show # Make skill gems pop during campaign
     AreaLevel < 65
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    #PlayAlertSound 2 300
-    CustomAlertSound "sounds/GladOS/UncutSkillGem_Detected_Long.wav" 300
+    PlayAlertSound 2 300
+    #CustomAlertSound "sounds/GladOS/UncutSkillGem_Detected_Long.wav" 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 40
 
 Show # Gems up to level 18 in maps don't get a special highlight
     BaseType "Uncut Skill Gem"
-    AreaLevel >= 65
+    AreaLevel > 65
     ItemLevel <= 18
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
@@ -394,8 +395,8 @@ Show # Special A Tier - League specific socketables and jewels
     SetBorderColor 0 240 190
     SetFontSize 45
     MinimapIcon 0 Cyan Diamond
-    #PlayAlertSound 2 300
-    CustomAlertSound "sounds/GladOS/Special_Item_Detected.wav" 300
+    PlayAlertSound 2 300
+    #CustomAlertSound "sounds/GladOS/Special_Item_Detected.wav" 300
     PlayEffect Cyan
 
 ## Special Highlight - Breach Rings
@@ -434,9 +435,9 @@ Show # Special A Tier - Rare Jewels
     SetFontSize 40
     MinimapIcon 1 Cyan Diamond
     PlayEffect Cyan
-    #PlayAlertSound 2 300
-    CustomAlertSound "sounds/GladOS/Jewel_Valuable.wav" 300
+    PlayAlertSound 2 300
 
+#CustomAlertSound "sounds/GladOS/Jewel_Valuable.wav" 300
 Show # Special B Tier - Any Runes and Charms
     BaseType " Rune" " Charm"
     SetTextColor 0 240 190
