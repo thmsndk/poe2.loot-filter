@@ -134,6 +134,11 @@ Show # Scroll of Wisdom after lvl 10 is less important
     AreaLevel > 10 # At ~lvl 10 we unlock the hooded one that can identify items
     SetFontSize 15
 
+Hide # Scroll of Wisdom after lvl 10 is less important
+    Class == "Currency"
+    BaseType == "Scroll of Wisdom"
+    AreaLevel > 15
+
 ## Valuables
 Show # Divine Orb Style
     Class "Currency"
