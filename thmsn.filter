@@ -135,12 +135,13 @@ Show # Scroll of Wisdom after lvl 10 is less important
     AreaLevel > 10 # At ~lvl 10 we unlock the hooded one that can identify items
     SetFontSize 15
 
-Hide # Scroll of Wisdom after lvl 10 is less important
-    Class == "Currency"
-    BaseType == "Scroll of Wisdom"
-    AreaLevel > 15
+#  TODO: hide border at higher levels
+# Hide # Scroll of Wisdom after lvl 10 is less important
+#    Class == "Currency"
+#    BaseType == "Scroll of Wisdom"
+#    AreaLevel > 15
+#    # Valuables
 
-## Valuables
 Show # Divine Orb Style
     Class "Currency"
     BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
@@ -270,8 +271,8 @@ Show # Always make Spirit gems pop
     BaseType "Uncut Spirit Gem"
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    PlayAlertSound 2 300
-    #CustomAlertSound "sounds/GladOS/SpiritGem_Uncut.wav" 300
+    #PlayAlertSound 2 300
+    CustomAlertSound "sounds/GladOS/gem/spirit_gem_not_science__0f03d5.wav" 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 40
@@ -383,6 +384,41 @@ Show
     #SetFontSize 40
     SetBorderColor 0 0 120 255
     SetBackgroundColor 0 0 120 180
+    Continue
+
+#---------------------------------
+# Rare specific sounds
+#---------------------------------
+
+Show # Rare basic jewelry
+    Class "Rings" "Amulets" "Belts"
+    Rarity Rare
+    CustomAlertSound "sounds/GladOS/jewellery/basic_jewelry_like_you__884708.wav" 300
+    Continue
+
+Show # Rare 1H Weapons
+    Class "Claws" "Daggers" "Wands" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Sceptres" "Spears" "Flails"
+    Rarity Rare
+    CustomAlertSound "sounds/GladOS/1h/one_handed_mediocre__acb5cc.wav" 300
+    Continue
+
+Show # Rare 2H Weapons
+    Class "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Quarterstaves" "Crossbows" "Traps" "Fishing Rods"
+    Rarity Rare
+    CustomAlertSound "sounds/GladOS/2h/large_weapon_compensating__ed2e7d.wav" 300
+    Continue
+
+
+# Show # Rare offhand
+#    Class "Quivers" "Shields" "Foci"
+#    Rarity Rare
+#    CustomAlertSound "sounds/GladOS/offhand/offhand_mediocre__999999.wav" 300
+
+#    Continue
+Show # Rare Armour
+    Class "Gloves" "Boots" "Body Armours" "Helmets"
+    Rarity Rare
+    CustomAlertSound "sounds/GladOS/armor/protection_from_failure__cf8357.wav" 300
     Continue
 
 #--------------------------
