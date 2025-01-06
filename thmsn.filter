@@ -3,6 +3,7 @@
 # https://www.pathofexile.com/item-filter/about
 # https://pathofexile.fandom.com/wiki/Guide:Item_filter
 # Based on v0.2.0 of NeverSink's Litefilter: https://github.com/NeverSinkDev/NeverSink-PoE2litefilter/blob/main/NeverSinks%20Litefilter.filter
+# TODO: belts are kinda important early game, should probably  be emphasized
 
 # TODO: Import does not exist in PoE2
 Show # Base font size for all items
@@ -13,6 +14,7 @@ Show # Base font size for all items
 # Gold
 #===============================================================================================================
 
+
 Show
     AreaLevel >= 70
     StackSize >= 1000
@@ -20,6 +22,7 @@ Show
     SetTextColor 255 255 255
     SetBorderColor 255 255 255
     PlayEffect Orange Temp
+    MinimapIcon 2 White Cross
 
 Show
     AreaLevel < 70
@@ -28,12 +31,14 @@ Show
     SetTextColor 255 255 255
     SetBorderColor 255 255 255
     PlayEffect Orange Temp
+    MinimapIcon 2 White Cross
 
 Show
     BaseType == "Gold"
     SetTextColor 180 180 180
     SetBorderColor 0 0 0 255
     SetBackgroundColor 0 0 0 180
+    MinimapIcon 2 Grey Cross
 
 #===============================================================================================================
 # Base Rarity styles (Normal, Magic, Rare, Unique)
@@ -114,6 +119,7 @@ Show # All uniques
 # Currency
 #===============================================================================================================
 
+
 Show # Generic currency style
     Class == "Currency"
     SetTextColor 255 207 132
@@ -166,6 +172,7 @@ Show
 #--------------------------
 # Socketables and Special Character Equipment
 #--------------------------
+
 
 Show # Currency Tier A: Annullment
     Class "Currency"
@@ -267,6 +274,7 @@ Show # Unknown currency
 # Gems
 #===============================================================================================================
 
+
 Show # Always make Spirit gems pop
     BaseType "Uncut Spirit Gem"
     SetTextColor 20 240 240
@@ -336,6 +344,7 @@ Show # Skill Gems - Drops on beach, unsure if it drops elsewhere
 # Base Item Types
 #===============================================================================================================
 
+
 Show
     Class == "Amulets" "Belts" "Rings" "Charm"
     SetBorderColor 255 255 255 255
@@ -354,8 +363,8 @@ Show # slightly more important rares
 #    #SetFontSize 40
 #    SetBorderColor 0 150 0 255
 #    #SetBackgroundColor 4 67 4 210
-
 #    Continue
+
 # Show
 #    Class == "Boots"
 #    #AreaLevel <= 16
@@ -390,6 +399,7 @@ Show
 # Rare specific sounds
 #---------------------------------
 
+
 Show # Rare basic jewelry
     Class "Rings" "Amulets" "Belts"
     Rarity Rare
@@ -408,7 +418,6 @@ Show # Rare 2H Weapons
     CustomAlertSound "sounds/GladOS/2h/large_weapon_compensating__ed2e7d.wav" 300
     Continue
 
-
 # Show # Rare offhand
 #    Class "Quivers" "Shields" "Foci"
 #    Rarity Rare
@@ -424,6 +433,7 @@ Show # Rare Armour
 #--------------------------
 # Socketables and Special Character Equipment
 #--------------------------
+
 
 Show # Special A Tier - League specific socketables and jewels
     BaseType "Soul Core" "Timeless"
@@ -483,6 +493,7 @@ Show # Special B Tier - Any Runes and Charms
 # Fragments
 #===============================================================================================================
 
+
 Show
     Class "Pinnacle Keys"
     SetTextColor 255 207 255
@@ -518,6 +529,7 @@ Show
 # Waystones
 #--------------------------
 
+
 Show
     WaystoneTier < 10
     AreaLevel > 77
@@ -550,6 +562,7 @@ Show
 #===============================================================================================================
 # Quest Items
 #===============================================================================================================
+
 
 Show
     Class == "Quest Items"
