@@ -5,7 +5,8 @@
   "scripts": {
     "voice": "ts-node src/generate-voice.ts",
     "build": "tsc",
-    "start": "node dist/generate-voice.js"
+    "start": "node dist/generate-voice.js",
+    "track-deaths": "ts-node src/death-tracker.ts"
   },
   "dependencies": {
     "ts-node": "^10.9.2"
