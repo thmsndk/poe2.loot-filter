@@ -15,6 +15,7 @@ Show # Base font size for all items
 #===============================================================================================================
 
 
+# At low level ,AreaLevel 10 I got a gold drop for 179, that should be highlighted as exciting
 Show
     AreaLevel >= 70
     StackSize >= 1000
