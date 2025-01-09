@@ -435,6 +435,11 @@ class DeathTracker {
   ): Promise<void> {
     const charInfo = this.stats.characters[character];
     const levelStats = charInfo.levelingStats;
+    const sessionTime = this.getSessionTime(charInfo);
+    const levelsPerHour = (
+      ((levelStats?.currentLevel ?? 0) * 3600) /
+      sessionTime
+    ).toFixed(1);
 
     // Save full JSON stats
     await fs.writeFile(
@@ -454,10 +459,9 @@ class DeathTracker {
       )
     );
 
-    // Level progress - horizontal format with emojis
     if (levelStats?.timeToLevel) {
-      // Last 5 levels with timestamps
-      const recentLevels = Object.entries(levelStats.timeToLevel)
+      // Recent levels - horizontal format
+      const recentLevelsHorizontal = Object.entries(levelStats.timeToLevel)
         .slice(-5)
         .map(
           ([level, info]) =>
@@ -470,7 +474,7 @@ class DeathTracker {
         .join(" ➡️ ");
       await fs.writeFile(
         path.join(this.outputDir, "current_character_recent_levels.txt"),
-        `🎯 Recent Levels: ${recentLevels}`
+        `🎯 Recent Levels: ${recentLevelsHorizontal}`
       );
 
       // All levels compact view
@@ -496,10 +500,7 @@ class DeathTracker {
         `⌚ Average: ${this.formatShortDuration(
           levelStats.averageTimePerLevel ?? 0
         )}`,
-        `🏃 Pace: ${(
-          (levelStats.currentLevel * 3600) /
-          this.getSessionTime(charInfo)
-        ).toFixed(1)} lvl/hr`,
+        `🏃 Pace: ${levelsPerHour} lvl/hr`,
       ].join(" | ");
       await fs.writeFile(
         path.join(this.outputDir, "current_character_records.txt"),
@@ -508,9 +509,7 @@ class DeathTracker {
 
       // Session stats
       const sessionStats = [
-        `🕒 Session Length: ${this.formatShortDuration(
-          this.getSessionTime(charInfo)
-        )}`,
+        `🕒 Session Length: ${this.formatShortDuration(sessionTime)}`,
         `📊 Levels Gained: ${levelStats.currentLevel}`,
         `💀 Deaths: ${charInfo.deaths}`,
         `🎮 Started: ${charInfo.created?.split(" ")[1]}`,
@@ -520,24 +519,94 @@ class DeathTracker {
         sessionStats
       );
 
-      // Last 5 levels - vertical format, descending order with timestamps
+      // Basic formats 1-4
+      const basicFormat1 = `${character} (${charInfo.class}) | Level ${
+        levelStats.currentLevel
+      } | Deaths: ${charInfo.deaths} | Last Level: ${this.formatShortDuration(
+        levelStats.timeToLevel[levelStats.currentLevel]?.secondsTaken ?? 0
+      )} | Avg: ${this.formatShortDuration(
+        levelStats.averageTimePerLevel ?? 0
+      )}`;
+
+      // For Format 2, we need to exclude level 1 from fastest time consideration
+      const validTimes = Object.entries(levelStats.timeToLevel)
+        .filter(
+          ([level, info]) =>
+            parseInt(level) > 1 && // Exclude level 1
+            info.secondsTaken !== null && // Ensure secondsTaken exists
+            info.secondsTaken !== undefined && // Extra safety check
+            info.secondsTaken > 0 // Only include positive times
+        )
+        .map(([_, info]) => info.secondsTaken as number);
+
+      const fastestTime =
+        validTimes.length > 0 ? Math.min(...validTimes) : null;
+      const slowestTime =
+        validTimes.length > 0 ? Math.max(...validTimes) : null;
+
+      const basicFormat2 = [
+        `${character} (${charInfo.class}) | Level ${levelStats.currentLevel} | Deaths: ${charInfo.deaths}`,
+        `⚡ Fast: ${this.formatShortDuration(
+          fastestTime
+        )} | 🐌 Slow: ${this.formatShortDuration(
+          slowestTime
+        )} | ⌚ Avg: ${this.formatShortDuration(
+          levelStats.averageTimePerLevel ?? 0
+        )}`,
+      ].join("\n");
+
+      const basicFormat3 = `${character} (L${levelStats.currentLevel} ${
+        charInfo.class
+      }) | Recent: ${Object.entries(levelStats.timeToLevel)
+        .slice(-3)
+        .map(
+          ([level, info]) =>
+            `L${level}: ${this.formatShortDuration(info.secondsTaken ?? 0)}`
+        )
+        .join(" → ")} | Avg: ${this.formatShortDuration(
+        levelStats.averageTimePerLevel ?? 0
+      )}`;
+
+      const basicFormat4 = [
+        `👤 ${character} (${charInfo.class}) | 📊 Level ${
+          levelStats.currentLevel
+        } | ⏱️ Session: ${this.formatShortDuration(sessionTime)}`,
+        `⚡ ${levelsPerHour} lvl/hr | 🏃 Best: ${this.formatShortDuration(
+          fastestTime
+        )} | ⌚ Avg: ${this.formatShortDuration(
+          levelStats.averageTimePerLevel ?? 0
+        )} | 💀 Deaths: ${charInfo.deaths}`,
+      ].join("\n");
+
+      // Last 5 levels - vertical format
       const recentLevelsVertical = Object.entries(levelStats.timeToLevel)
         .slice(-5)
         .reverse()
-        .map(([level, info]) => {
-          const levelNum = parseInt(level);
-          const timeTaken =
-            info.secondsTaken !== null
-              ? this.formatShortDuration(info.secondsTaken)
-              : levelNum === 1
-              ? "0s"
-              : "N/A";
-
-          return `📊 Level ${level.padStart(2, " ")} | ⏱️ ${timeTaken} | 🕒 ${
-            info.timestamp.split(" ")[1]
-          }`;
-        })
+        .map(
+          ([level, info]) =>
+            `📊 Level ${level.padStart(2, " ")} | ⏱️ ${this.formatShortDuration(
+              info.secondsTaken ?? 0
+            )} | 🕒 ${info.timestamp.split(" ")[1]}`
+        )
         .join("\n");
+
+      // Save all formats
+      await fs.writeFile(
+        path.join(this.outputDir, "current_character_basic1.txt"),
+        basicFormat1
+      );
+      await fs.writeFile(
+        path.join(this.outputDir, "current_character_basic2.txt"),
+        basicFormat2
+      );
+      await fs.writeFile(
+        path.join(this.outputDir, "current_character_basic3.txt"),
+        basicFormat3
+      );
+      await fs.writeFile(
+        path.join(this.outputDir, "current_character_basic4.txt"),
+        basicFormat4
+      );
       await fs.writeFile(
         path.join(
           this.outputDir,
@@ -555,15 +624,15 @@ class DeathTracker {
     return Math.floor((end.getTime() - start.getTime()) / 1000);
   }
 
-  private formatShortDuration(seconds: number): string {
-    if (!seconds) return "N/A";
-    if (seconds < 60) return `${seconds}s`;
+  private formatShortDuration(seconds: number | null): string {
+    if (seconds === null || seconds === undefined) return "N/A";
+    if (seconds === 0) return "0s"; // Changed to explicitly show 0s instead of N/A
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
-    if (minutes < 60) return `${minutes}m${remainingSeconds}s`;
+    if (minutes < 60) return `${minutes}m ${remainingSeconds}s`;
     const hours = Math.floor(minutes / 60);
     const remainingMinutes = minutes % 60;
-    return `${hours}h${remainingMinutes}m`;
+    return `${hours}h ${remainingMinutes}m`;
   }
 }
 
