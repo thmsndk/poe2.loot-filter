@@ -494,9 +494,11 @@ class DeathTracker {
         .sort(([a], [b]) => parseInt(a) - parseInt(b))
         .map(
           ([level, info]) =>
-            `📊 Level ${level.padStart(2)}  |  ⏱️ ${this.formatShortDuration(
+            `🕒 ${
+              info.timestamp.split(" ")[1]
+            }  |  📊 Level ${level}  |  ⏱️ ${this.formatShortDuration(
               info.secondsTaken ?? 0
-            ).padEnd(8)}  |  🕒 ${info.timestamp.split(" ")[1]}`
+            )}`
         )
         .join("\n");
       await fs.writeFile(
@@ -599,9 +601,11 @@ class DeathTracker {
         .reverse()
         .map(
           ([level, info]) =>
-            `📊 Level ${level.padStart(2)}  |  ⏱️ ${this.formatShortDuration(
+            `🕒 ${
+              info.timestamp.split(" ")[1]
+            }  |  📊 Level ${level}  |  ⏱️ ${this.formatShortDuration(
               info.secondsTaken ?? 0
-            ).padEnd(8)}  |  🕒 ${info.timestamp.split(" ")[1]}`
+            )}`
         )
         .join("\n");
 
