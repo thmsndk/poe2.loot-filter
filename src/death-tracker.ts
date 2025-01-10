@@ -489,6 +489,21 @@ class DeathTracker {
         `📈 Level History: ${allLevels}`
       );
 
+      // Add new vertical all levels view
+      const allLevelsVertical = Object.entries(levelStats.timeToLevel)
+        .sort(([a], [b]) => parseInt(a) - parseInt(b))
+        .map(
+          ([level, info]) =>
+            `📊 Level ${level.padStart(2)}  |  ⏱️ ${this.formatShortDuration(
+              info.secondsTaken ?? 0
+            ).padEnd(8)}  |  🕒 ${info.timestamp.split(" ")[1]}`
+        )
+        .join("\n");
+      await fs.writeFile(
+        path.join(this.outputDir, "current_character_all_levels_vertical.txt"),
+        `📈 Level History:\n\n${allLevelsVertical}`
+      );
+
       // Records and averages
       const records = [
         `⚡ Fastest: L${
@@ -578,15 +593,15 @@ class DeathTracker {
         )} | 💀 Deaths: ${charInfo.deaths}`,
       ].join("\n");
 
-      // Last 5 levels - vertical format
+      // Last 5 levels - vertical format with improved alignment
       const recentLevelsVertical = Object.entries(levelStats.timeToLevel)
         .slice(-5)
         .reverse()
         .map(
           ([level, info]) =>
-            `📊 Level ${level.padStart(2, " ")} | ⏱️ ${this.formatShortDuration(
+            `📊 Level ${level.padStart(2)}  |  ⏱️ ${this.formatShortDuration(
               info.secondsTaken ?? 0
-            )} | 🕒 ${info.timestamp.split(" ")[1]}`
+            ).padEnd(8)}  |  🕒 ${info.timestamp.split(" ")[1]}`
         )
         .join("\n");
 
