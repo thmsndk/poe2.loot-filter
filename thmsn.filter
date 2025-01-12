@@ -25,7 +25,7 @@ Show # Endgame massive stack
     SetBorderColor 255 215 0
     SetBackgroundColor 0 0 0 200
     PlayEffect Yellow Temp
-    MinimapIcon 3 Yellow Star
+    MinimapIcon 2 Yellow Cross
 
 Show # Endgame large stack
     AreaLevel >= 70
@@ -35,7 +35,7 @@ Show # Endgame large stack
     SetTextColor 255 215 0
     SetBorderColor 255 215 0 200
     SetBackgroundColor 0 0 0 50
-    MinimapIcon 2 Yellow Circle
+    MinimapIcon 1 Yellow Cross
 
 Show # Endgame medium stack
     AreaLevel >= 70
@@ -45,7 +45,7 @@ Show # Endgame medium stack
     SetTextColor 200 170 0
     SetBorderColor 180 150 0 200
     SetBackgroundColor 0 0 0 0
-    MinimapIcon 1 Yellow Cross
+    MinimapIcon 0 Yellow Cross
 
 # Midgame (Level 20-69)
 Show # Midgame massive stack
@@ -57,7 +57,7 @@ Show # Midgame massive stack
     SetBorderColor 255 215 0
     SetBackgroundColor 0 0 0 200
     PlayEffect Yellow Temp
-    MinimapIcon 3 Yellow Star
+    MinimapIcon 2 Yellow Cross
 
 Show # Midgame large stack
     AreaLevel >= 20
@@ -67,7 +67,7 @@ Show # Midgame large stack
     SetTextColor 255 215 0
     SetBorderColor 255 215 0 200
     SetBackgroundColor 0 0 0 50
-    MinimapIcon 2 Yellow Circle
+    MinimapIcon 1 Yellow Cross
 
 Show # Midgame medium stack
     AreaLevel >= 20
@@ -77,7 +77,7 @@ Show # Midgame medium stack
     SetTextColor 200 170 0
     SetBorderColor 180 150 0 200
     SetBackgroundColor 0 0 0 0
-    MinimapIcon 1 Yellow Cross
+    MinimapIcon 0 Yellow Cross
 
 # Early game (Level 1-19)
 Show # Early game massive stack
@@ -89,7 +89,7 @@ Show # Early game massive stack
     SetBorderColor 255 215 0
     SetBackgroundColor 0 0 0 200
     PlayEffect Yellow Temp
-    MinimapIcon 3 Yellow Star
+    MinimapIcon 0 Yellow Cross
 
 Show # Early game large stack
     AreaLevel < 20
@@ -99,7 +99,7 @@ Show # Early game large stack
     SetTextColor 255 215 0
     SetBorderColor 255 215 0 200
     SetBackgroundColor 0 0 0 50
-    MinimapIcon 2 Yellow Circle
+    MinimapIcon 1 Yellow Cross
 
 Show # Early game medium stack
     AreaLevel < 20
@@ -109,7 +109,7 @@ Show # Early game medium stack
     SetTextColor 200 170 0
     SetBorderColor 180 150 0 200
     SetBackgroundColor 0 0 0 0
-    MinimapIcon 1 Yellow Cross
+    MinimapIcon 0 Yellow Cross
 
 # Basic drops (any level)
 Show # All other gold
@@ -118,7 +118,7 @@ Show # All other gold
     SetTextColor 180 150 0
     SetBorderColor 0 0 0 0
     SetBackgroundColor 0 0 0 0
-    MinimapIcon 2 Grey Cross
+    MinimapIcon 0 Grey Cross
 
 #===============================================================================================================
 # Base Rarity styles (Normal, Magic, Rare, Unique)
