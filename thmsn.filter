@@ -15,30 +15,109 @@ Show # Base font size for all items
 #===============================================================================================================
 
 
-# At low level ,AreaLevel 10 I got a gold drop for 179, that should be highlighted as exciting
-Show
+# Endgame (Level 70+)
+Show # Endgame massive stack
+    AreaLevel >= 70
+    StackSize >= 2000
+    BaseType == "Gold"
+    SetFontSize 45
+    SetTextColor 255 255 0
+    SetBorderColor 255 215 0
+    SetBackgroundColor 0 0 0 255
+    PlayEffect Yellow
+    MinimapIcon 0 Yellow Star
+
+Show # Endgame large stack
     AreaLevel >= 70
     StackSize >= 1000
     BaseType == "Gold"
-    SetTextColor 255 255 255
-    SetBorderColor 255 255 255
-    PlayEffect Orange Temp
-    MinimapIcon 2 White Cross
+    SetFontSize 40
+    SetTextColor 255 215 0
+    SetBorderColor 180 150 0
+    SetBackgroundColor 0 0 0 200
+    MinimapIcon 1 Yellow Circle
 
-Show
-    AreaLevel < 70
+Show # Endgame medium stack
+    AreaLevel >= 70
     StackSize >= 500
     BaseType == "Gold"
-    SetTextColor 255 255 255
-    SetBorderColor 255 255 255
-    PlayEffect Orange Temp
-    MinimapIcon 2 White Cross
+    SetFontSize 30
+    SetTextColor 200 170 0
+    SetBorderColor 180 150 0
+    SetBackgroundColor 0 0 0 150
+    MinimapIcon 2 Yellow Cross
 
-Show
+# Midgame (Level 20-69)
+Show # Midgame massive stack
+    AreaLevel >= 20
+    StackSize >= 1000
     BaseType == "Gold"
-    SetTextColor 180 180 180
-    SetBorderColor 0 0 0 255
-    SetBackgroundColor 0 0 0 180
+    SetFontSize 45
+    SetTextColor 255 255 0
+    SetBorderColor 255 215 0
+    SetBackgroundColor 0 0 0 255
+    PlayEffect Yellow
+    MinimapIcon 0 Yellow Star
+
+Show # Midgame large stack
+    AreaLevel >= 20
+    StackSize >= 500
+    BaseType == "Gold"
+    SetFontSize 40
+    SetTextColor 255 215 0
+    SetBorderColor 180 150 0
+    SetBackgroundColor 0 0 0 200
+    MinimapIcon 1 Yellow Circle
+
+Show # Midgame medium stack
+    AreaLevel >= 20
+    StackSize >= 100
+    BaseType == "Gold"
+    SetFontSize 30
+    SetTextColor 200 170 0
+    SetBorderColor 180 150 0
+    SetBackgroundColor 0 0 0 150
+    MinimapIcon 2 Yellow Cross
+
+# Early game (Level 1-19)
+Show # Early game massive stack
+    AreaLevel < 20
+    StackSize >= 150
+    BaseType == "Gold"
+    SetFontSize 45
+    SetTextColor 255 255 0
+    SetBorderColor 255 215 0
+    SetBackgroundColor 0 0 0 255
+    PlayEffect Yellow
+    MinimapIcon 0 Yellow Star
+
+Show # Early game large stack
+    AreaLevel < 20
+    StackSize >= 75
+    BaseType == "Gold"
+    SetFontSize 40
+    SetTextColor 255 215 0
+    SetBorderColor 180 150 0
+    SetBackgroundColor 0 0 0 200
+    MinimapIcon 1 Yellow Circle
+
+Show # Early game medium stack
+    AreaLevel < 20
+    StackSize >= 30
+    BaseType == "Gold"
+    SetFontSize 30
+    SetTextColor 200 170 0
+    SetBorderColor 180 150 0
+    SetBackgroundColor 0 0 0 150
+    MinimapIcon 2 Yellow Cross
+
+# Basic drops (any level)
+Show # All other gold
+    BaseType == "Gold"
+    #SetFontSize 32
+    SetTextColor 180 150 0
+    #SetBorderColor 180 150 0 150
+    SetBackgroundColor 0 0 0 0
     MinimapIcon 2 Grey Cross
 
 #===============================================================================================================
