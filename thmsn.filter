@@ -20,18 +20,18 @@ Show # Endgame massive stack
     AreaLevel >= 70
     StackSize >= 2000
     BaseType == "Gold"
-    SetFontSize 45
+    SetFontSize 30
     SetTextColor 255 255 0
     SetBorderColor 255 215 0
     SetBackgroundColor 0 0 0 200
     PlayEffect Yellow Temp
-    MinimapIcon 2 Yellow Cross
+    MinimapIcon 1 Yellow Cross
 
 Show # Endgame large stack
     AreaLevel >= 70
     StackSize >= 1000
     BaseType == "Gold"
-    SetFontSize 40
+    SetFontSize 25
     SetTextColor 255 215 0
     SetBorderColor 255 215 0 200
     SetBackgroundColor 0 0 0 50
@@ -41,29 +41,29 @@ Show # Endgame medium stack
     AreaLevel >= 70
     StackSize >= 500
     BaseType == "Gold"
-    SetFontSize 30
+    SetFontSize 20
     SetTextColor 200 170 0
     SetBorderColor 180 150 0 200
-    SetBackgroundColor 0 0 0 0
-    MinimapIcon 0 Yellow Cross
+    SetBackgroundColor 0 0 0 25
+    MinimapIcon 2 Yellow Cross
 
 # Midgame (Level 20-69)
 Show # Midgame massive stack
     AreaLevel >= 20
     StackSize >= 1000
     BaseType == "Gold"
-    SetFontSize 45
+    SetFontSize 30
     SetTextColor 255 255 0
     SetBorderColor 255 215 0
     SetBackgroundColor 0 0 0 200
     PlayEffect Yellow Temp
-    MinimapIcon 2 Yellow Cross
+    MinimapIcon 1 Yellow Cross
 
 Show # Midgame large stack
     AreaLevel >= 20
     StackSize >= 500
     BaseType == "Gold"
-    SetFontSize 40
+    SetFontSize 25
     SetTextColor 255 215 0
     SetBorderColor 255 215 0 200
     SetBackgroundColor 0 0 0 50
@@ -73,29 +73,29 @@ Show # Midgame medium stack
     AreaLevel >= 20
     StackSize >= 100
     BaseType == "Gold"
-    SetFontSize 30
+    SetFontSize 20
     SetTextColor 200 170 0
     SetBorderColor 180 150 0 200
-    SetBackgroundColor 0 0 0 0
-    MinimapIcon 0 Yellow Cross
+    SetBackgroundColor 0 0 0 25
+    MinimapIcon 2 Yellow Cross
 
 # Early game (Level 1-19)
 Show # Early game massive stack
     AreaLevel < 20
     StackSize >= 150
     BaseType == "Gold"
-    SetFontSize 45
+    SetFontSize 30
     SetTextColor 255 255 0
     SetBorderColor 255 215 0
     SetBackgroundColor 0 0 0 200
     PlayEffect Yellow Temp
-    MinimapIcon 0 Yellow Cross
+    MinimapIcon 1 Yellow Cross
 
 Show # Early game large stack
     AreaLevel < 20
     StackSize >= 75
     BaseType == "Gold"
-    SetFontSize 40
+    SetFontSize 25
     SetTextColor 255 215 0
     SetBorderColor 255 215 0 200
     SetBackgroundColor 0 0 0 50
@@ -105,20 +105,20 @@ Show # Early game medium stack
     AreaLevel < 20
     StackSize >= 30
     BaseType == "Gold"
-    SetFontSize 30
+    SetFontSize 20
     SetTextColor 200 170 0
     SetBorderColor 180 150 0 200
-    SetBackgroundColor 0 0 0 0
-    MinimapIcon 0 Yellow Cross
+    SetBackgroundColor 0 0 0 25
+    MinimapIcon 2 Yellow Cross
 
 # Basic drops (any level)
 Show # All other gold
     BaseType == "Gold"
-    #SetFontSize 32
+    SetFontSize 20
     SetTextColor 180 150 0
     SetBorderColor 0 0 0 0
-    SetBackgroundColor 0 0 0 0
-    MinimapIcon 0 Grey Cross
+    SetBackgroundColor 0 0 0 25
+    MinimapIcon 2 Grey Cross
 
 #===============================================================================================================
 # Base Rarity styles (Normal, Magic, Rare, Unique)
@@ -177,7 +177,7 @@ Show # All rares
     SetFontSize 30
     #SetBackgroundColor 20 20 0 255
     #PlayAlertSound 8 300
-    CustomAlertSound "sounds/GladOS/rare_disappointment_imminent__340e5f.wav" 300
+    CustomAlertSound "sounds/GLaDOS/rare_disappointment_imminent__340e5f.wav" 300
     PlayEffect Yellow
     MinimapIcon 2 Yellow Diamond
     Continue
@@ -190,7 +190,7 @@ Show # All uniques
     SetBorderColor 175 96 37 255
     SetBackgroundColor 53 13 13 255
     #PlayAlertSound 3 300
-    CustomAlertSound "sounds/GladOS/Unique1.wav" 300
+    #CustomAlertSound "sounds/GLaDOS/Unique1.wav" 300
     PlayEffect Brown
     MinimapIcon 2 Brown Star
     Continue
@@ -235,7 +235,7 @@ Show # Divine Orb Style
     SetTextColor 255 0 0 255
     SetBorderColor 255 0 0 255
     SetBackgroundColor 255 255 255 255
-    CustomAlertSound "sounds/GladOS/Currency_Exceptional.wav" 300
+    #CustomAlertSound "sounds/GLaDOS/Currency_Exceptional.wav" 300
     PlayEffect Red
     MinimapIcon 0 Red Star
 
@@ -245,7 +245,7 @@ Show
     SetTextColor 255 0 0 255
     SetBorderColor 255 0 0 255
     SetBackgroundColor 255 255 255 255
-    CustomAlertSound "sounds/GladOS/Currency_Exceptional.wav" 300
+    #CustomAlertSound "sounds/GLaDOS/Currency_Exceptional.wav" 300
     PlayEffect Red
     MinimapIcon 0 Red Star
 
@@ -261,7 +261,7 @@ Show # Currency Tier A: Annullment
     SetBorderColor 255 255 255 255
     SetBackgroundColor 240 90 35
     PlayAlertSound 1 300
-    #CustomAlertSound "sounds/GladOS/Currency_Valuable_CraftingAttempts.wav" 300
+    #CustomAlertSound "sounds/GLaDOS/Currency_Valuable_CraftingAttempts.wav" 300
     PlayEffect White
     MinimapIcon 1 Yellow Circle
     SetFontSize 40
@@ -274,7 +274,7 @@ Show # Exalt
     SetBorderColor 255 207 92
     SetBackgroundColor 76 51 12
     PlayAlertSound 2 300
-    #CustomAlertSound "sounds/GladOS/Currency_Important.wav" 300
+    #CustomAlertSound "sounds/GLaDOS/Currency_Important.wav" 300
     PlayEffect Yellow
     MinimapIcon 1 Yellow Circle
     SetFontSize 40
@@ -285,7 +285,7 @@ Show
     SetBorderColor 255 207 132
     SetBackgroundColor 76 51 12
     PlayAlertSound 2 300
-    #CustomAlertSound "sounds/GladOS/Currency_Important.wav" 300
+    #CustomAlertSound "sounds/GLaDOS/Currency_Important.wav" 300
     PlayEffect White
     MinimapIcon 2 White Circle
     SetFontSize 40
@@ -295,7 +295,7 @@ Show # Regal, Vaal ...
     BaseType "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy"
     SetBackgroundColor 76 51 12
     PlayAlertSound 2 300
-    #CustomAlertSound "sounds/GladOS/Currency_Important.wav" 300
+    #CustomAlertSound "sounds/GLaDOS/Currency_Important.wav" 300
     PlayEffect White
     MinimapIcon 2 White Circle
     SetFontSize 40
@@ -305,7 +305,7 @@ Show
     BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact"
     SetBackgroundColor 76 51 12
     PlayAlertSound 2 100
-    #CustomAlertSound "sounds/GladOS/Currency_Important.wav" 100
+    #CustomAlertSound "sounds/GLaDOS/Currency_Important.wav" 100
     PlayEffect White Temp
     MinimapIcon 1 White Kite
     SetFontSize 35
@@ -345,8 +345,8 @@ Show
 Show # Unknown currency
     Class "Currency"
     SetBackgroundColor 76 51 12
-    #PlayAlertSound 2 300
-    CustomAlertSound "sounds/GladOS/Unknown_002.wav" 300
+    PlayAlertSound 2 300
+    #CustomAlertSound "sounds/GLaDOS/Unknown_002.wav" 300
     PlayEffect Pink
     MinimapIcon 1 White Circle
 
@@ -360,7 +360,7 @@ Show # Always make Spirit gems pop
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
     #PlayAlertSound 2 300
-    CustomAlertSound "sounds/GladOS/gem/spirit_gem_not_science__0f03d5.wav" 300
+    CustomAlertSound "sounds/GLaDOS/gem/spirit_gem_not_science__0f03d5.wav" 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 40
@@ -371,7 +371,7 @@ Show # Make support gems pop during campaign
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
     PlayAlertSound 2 300
-    #CustomAlertSound "sounds/GladOS/UncutSupportGem_Specific1.wav" 300
+    #CustomAlertSound "sounds/GLaDOS/UncutSupportGem_Specific1.wav" 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 40
@@ -382,7 +382,7 @@ Show # Make skill gems pop during campaign
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
     PlayAlertSound 2 300
-    #CustomAlertSound "sounds/GladOS/UncutSkillGem_Detected_Long.wav" 300
+    #CustomAlertSound "sounds/GLaDOS/UncutSkillGem_Detected_Long.wav" 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 40
@@ -405,8 +405,8 @@ Show # Level 19 gems and up in maps get a special highlight
     BaseType "Uncut Skill Gem"
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    #PlayAlertSound 2 300
-    CustomAlertSound "sounds/GladOS/UncutSkillGem_Detected_Long.wav" 300
+    PlayAlertSound 2 300
+    #CustomAlertSound "sounds/GLaDOS/UncutSkillGem_Detected_Long.wav" 300
     PlayEffect Cyan
     MinimapIcon 1 Cyan Triangle
     SetFontSize 40
@@ -483,31 +483,31 @@ Show
 Show # Rare basic jewelry
     Class "Rings" "Amulets" "Belts"
     Rarity Rare
-    CustomAlertSound "sounds/GladOS/jewellery/basic_jewelry_like_you__884708.wav" 300
+    CustomAlertSound "sounds/GLaDOS/jewellery/basic_jewelry_like_you__884708.wav" 300
     Continue
 
 Show # Rare 1H Weapons
     Class "Claws" "Daggers" "Wands" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Sceptres" "Spears" "Flails"
     Rarity Rare
-    CustomAlertSound "sounds/GladOS/1h/one_handed_mediocre__acb5cc.wav" 300
+    CustomAlertSound "sounds/GLaDOS/1h/one_handed_mediocre__acb5cc.wav" 300
     Continue
 
 Show # Rare 2H Weapons
     Class "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Quarterstaves" "Crossbows" "Traps" "Fishing Rods"
     Rarity Rare
-    CustomAlertSound "sounds/GladOS/2h/large_weapon_compensating__ed2e7d.wav" 300
+    CustomAlertSound "sounds/GLaDOS/2h/large_weapon_compensating__ed2e7d.wav" 300
     Continue
 
 # Show # Rare offhand
 #    Class "Quivers" "Shields" "Foci"
 #    Rarity Rare
-#    CustomAlertSound "sounds/GladOS/offhand/offhand_mediocre__999999.wav" 300
+#    CustomAlertSound "sounds/GLaDOS/offhand/offhand_mediocre__999999.wav" 300
 
 #    Continue
 Show # Rare Armour
     Class "Gloves" "Boots" "Body Armours" "Helmets"
     Rarity Rare
-    CustomAlertSound "sounds/GladOS/armor/protection_from_failure__cf8357.wav" 300
+    CustomAlertSound "sounds/GLaDOS/armor/protection_from_failure__cf8357.wav" 300
     Continue
 
 #--------------------------
@@ -522,7 +522,7 @@ Show # Special A Tier - League specific socketables and jewels
     SetFontSize 45
     MinimapIcon 0 Cyan Diamond
     PlayAlertSound 2 300
-    #CustomAlertSound "sounds/GladOS/Special_Item_Detected.wav" 300
+    #CustomAlertSound "sounds/GLaDOS/Special_Item_Detected.wav" 300
     PlayEffect Cyan
 
 ## Special Highlight - Breach Rings
@@ -563,7 +563,7 @@ Show # Special A Tier - Rare Jewels
     PlayEffect Cyan
     PlayAlertSound 2 300
 
-#CustomAlertSound "sounds/GladOS/Jewel_Valuable.wav" 300
+#CustomAlertSound "sounds/GLaDOS/Jewel_Valuable.wav" 300
 Show # Special B Tier - Any Runes and Charms
     BaseType " Rune" " Charm"
     SetTextColor 0 240 190
@@ -579,8 +579,8 @@ Show
     SetTextColor 255 207 255
     SetBorderColor 255 207 255
     SetBackgroundColor 65 20 80
-    #PlayAlertSound 2 300
-    CustomAlertSound "sounds/GladOS/Pinnacle_001.wav" 300
+    PlayAlertSound 2 300
+    #CustomAlertSound "sounds/GLaDOS/Pinnacle_001.wav" 300
     PlayEffect White
     MinimapIcon 1 Yellow Square
     SetFontSize 40
@@ -633,8 +633,8 @@ Show
     Rarity <= Rare
     SetTextColor 255 255 255
     SetBorderColor 255 255 255
-    #PlayAlertSound 4 300
-    CustomAlertSound "sounds/GladOS/Waystone_Detected001.wav" 300
+    PlayAlertSound 4 300
+    #CustomAlertSound "sounds/GLaDOS/Waystone_Detected001.wav" 300
     PlayEffect White
     MinimapIcon 1 White Square
     SetFontSize 40
@@ -651,6 +651,7 @@ Show
     SetBorderColor 74 230 58 255
     SetBackgroundColor 20 20 0 255
     #PlayAlertSound 3 300
-    CustomAlertSound "sounds/GladOS/Quest_Item2.wav" 300
+    CustomAlertSound "sounds/GLaDOS/quest/another_quest_item_list_of_things_forget_about.wav" 300
     PlayEffect Green
     MinimapIcon 0 Green Pentagon
+# 
