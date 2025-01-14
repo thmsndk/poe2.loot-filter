@@ -14,7 +14,7 @@ Custom GlaDOS-style voice lines for Path of Exile 2 loot filter, generated using
 
 ## Unique Sound Variations
 
-### Tier 1 Expensive and Lucky (High Value)
+### Tier S Expensive and Lucky (High Value)
 
 - Unique detected. How remarkably valuable.
 - "Unique detected. How wonderfully expensive."

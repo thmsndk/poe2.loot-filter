@@ -177,7 +177,7 @@ Show # All rares
     SetFontSize 30
     #SetBackgroundColor 20 20 0 255
     #PlayAlertSound 8 300
-    CustomAlertSound "sounds/GLaDOS/rare_disappointment_imminent__340e5f.wav" 300
+    CustomAlertSound "sounds/GLaDOS/rare/rare_disappointment_imminent__340e5f.wav" 300
     PlayEffect Yellow
     MinimapIcon 2 Yellow Diamond
     Continue
