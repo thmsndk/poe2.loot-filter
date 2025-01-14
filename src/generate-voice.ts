@@ -9,8 +9,7 @@ function sanitizeText(text: string): string {
   return text
     .toLowerCase()
     .replace(/[^a-z0-9]/g, "_")
-    .replace(/_+/g, "_")
-    .slice(0, 30);
+    .replace(/_+/g, "_");
 }
 
 function findAvailableFilename(basePath: string, baseFilename: string): string {
